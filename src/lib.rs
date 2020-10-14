@@ -453,6 +453,29 @@ impl Deref for AIPS0 {
 }
 #[doc = "AIPS-Lite Bridge"]
 pub mod aips0;
+
+#[doc = "AIPS-Lite Bridge"]
+pub struct BB_AIPS0 {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for BB_AIPS0 {}
+impl BB_AIPS0 {
+    #[doc = r"Returns a pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const bb_aips0::RegisterBlock {
+        0x4200_0000 as *const _
+    }
+}
+impl Deref for BB_AIPS0 {
+    type Target = bb_aips0::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*BB_AIPS0::ptr() }
+    }
+}
+#[doc = "AIPS-Lite Bridge"]
+pub mod bb_aips0;
+
 #[doc = "AIPS-Lite Bridge"]
 pub struct AIPS1 {
     _marker: PhantomData<*const ()>,
@@ -474,6 +497,28 @@ impl Deref for AIPS1 {
 }
 #[doc = "AIPS-Lite Bridge"]
 pub mod aips1;
+#[doc = "AIPS-Lite Bridge"]
+pub struct BB_AIPS1 {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for BB_AIPS1 {}
+impl BB_AIPS1 {
+    #[doc = r"Returns a pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const bb_aips1::RegisterBlock {
+        0x4300_0000 as *const _
+    }
+}
+impl Deref for BB_AIPS1 {
+    type Target = aips1::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*AIPS1::ptr() }
+    }
+}
+#[doc = "AIPS-Lite Bridge"]
+pub mod bb_aips1;
+
 #[doc = "Crossbar switch"]
 pub struct AXBS {
     _marker: PhantomData<*const ()>,
@@ -1587,6 +1632,29 @@ impl Deref for PTA {
 }
 #[doc = "General Purpose Input/Output"]
 pub mod pta;
+
+#[doc = "General Purpose Input/Output"]
+pub struct BB_PTA {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for BB_PTA {}
+impl BB_PTA {
+    #[doc = r"Returns a pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const bb_pta::RegisterBlock {
+        0x43fe_0000 as *const _
+    }
+}
+impl Deref for BB_PTA {
+    type Target = bb_pta::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*BB_PTA::ptr() }
+    }
+}
+#[doc = "General Purpose Input/Output"]
+pub mod bb_pta;
+
 #[doc = "General Purpose Input/Output"]
 pub struct PTB {
     _marker: PhantomData<*const ()>,
@@ -1608,6 +1676,29 @@ impl Deref for PTB {
 }
 #[doc = "General Purpose Input/Output"]
 pub mod ptb;
+
+#[doc = "General Purpose Input/Output"]
+pub struct BB_PTB {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for BB_PTB {}
+impl BB_PTB {
+    #[doc = r"Returns a pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const bb_ptb::RegisterBlock {
+        0x43fe_0800 as *const _
+    }
+}
+impl Deref for BB_PTB {
+    type Target = bb_ptb::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*BB_PTB::ptr() }
+    }
+}
+#[doc = "General Purpose Input/Output"]
+pub mod bb_ptb;
+
 #[doc = "General Purpose Input/Output"]
 pub struct PTC {
     _marker: PhantomData<*const ()>,
@@ -1629,6 +1720,29 @@ impl Deref for PTC {
 }
 #[doc = "General Purpose Input/Output"]
 pub mod ptc;
+
+#[doc = "General Purpose Input/Output"]
+pub struct BB_PTC {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for BB_PTC {}
+impl BB_PTC {
+    #[doc = r"Returns a pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const bb_ptc::RegisterBlock {
+        0x43fe_1000 as *const _
+    }
+}
+impl Deref for BB_PTC {
+    type Target = bb_ptc::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*BB_PTC::ptr() }
+    }
+}
+#[doc = "General Purpose Input/Output"]
+pub mod bb_ptc;
+
 #[doc = "General Purpose Input/Output"]
 pub struct PTD {
     _marker: PhantomData<*const ()>,
@@ -1650,6 +1764,29 @@ impl Deref for PTD {
 }
 #[doc = "General Purpose Input/Output"]
 pub mod ptd;
+
+#[doc = "General Purpose Input/Output"]
+pub struct BB_PTD {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for BB_PTD {}
+impl BB_PTD {
+    #[doc = r"Returns a pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const bb_ptd::RegisterBlock {
+        0x43fe_1800 as *const _
+    }
+}
+impl Deref for BB_PTD {
+    type Target = bb_ptd::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*BB_PTD::ptr() }
+    }
+}
+#[doc = "General Purpose Input/Output"]
+pub mod bb_ptd;
+
 #[doc = "General Purpose Input/Output"]
 pub struct PTE {
     _marker: PhantomData<*const ()>,
@@ -1671,6 +1808,29 @@ impl Deref for PTE {
 }
 #[doc = "General Purpose Input/Output"]
 pub mod pte;
+
+#[doc = "General Purpose Input/Output"]
+pub struct BB_PTE {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for BB_PTE {}
+impl BB_PTE {
+    #[doc = r"Returns a pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const bb_pte::RegisterBlock {
+        0x43fe_2000 as *const _
+    }
+}
+impl Deref for BB_PTE {
+    type Target = bb_pte::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*BB_PTE::ptr() }
+    }
+}
+#[doc = "General Purpose Input/Output"]
+pub mod bb_pte;
+
 #[doc = "System Control Registers"]
 pub struct SYSTEMCONTROL {
     _marker: PhantomData<*const ()>,
@@ -2061,6 +2221,21 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             PTE: PTE {
+                _marker: PhantomData,
+            },
+            BB_PTA: BB_PTA {
+                _marker: PhantomData,
+            },
+            BB_PTB: BB_PTB {
+                _marker: PhantomData,
+            },
+            BB_PTC: BB_PTC {
+                _marker: PhantomData,
+            },
+            BB_PTD: BB_PTD {
+                _marker: PhantomData,
+            },
+            BB_PTE: BB_PTE {
                 _marker: PhantomData,
             },
             SYSTEMCONTROL: SYSTEMCONTROL {
