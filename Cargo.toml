@@ -1,0 +1,21 @@
+[package]
+name = "mk20d7"
+version = "0.0.1"
+categories = ["embedded", "no-std"]
+authors = [
+    "Thomas Campistron <irevoire@hotmail.fr>",
+    "Debilausaure",
+]
+edition = "2018"
+
+[dependencies]
+bare-metal = "0.2.0"
+cortex-m = "0.5.8"
+vcell = "0.1.0"
+
+[dependencies.cortex-m-rt]
+optional = true
+version = "0.6.5"
+
+[features]
+rt = ["cortex-m-rt/device"]
