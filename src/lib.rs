@@ -1905,6 +1905,10 @@ pub struct Peripherals {
     pub AIPS0: AIPS0,
     #[doc = "AIPS1"]
     pub AIPS1: AIPS1,
+    #[doc = "BB_AIPS0"]
+    pub BB_AIPS0: BB_AIPS0,
+    #[doc = "BB_AIPS1"]
+    pub BB_AIPS1: BB_AIPS1,
     #[doc = "AXBS"]
     pub AXBS: AXBS,
     #[doc = "DMA"]
@@ -2019,6 +2023,16 @@ pub struct Peripherals {
     pub PTD: PTD,
     #[doc = "PTE"]
     pub PTE: PTE,
+    #[doc = "BB_PTA"]
+    pub BB_PTA: BB_PTA,
+    #[doc = "BB_PTB"]
+    pub BB_PTB: BB_PTB,
+    #[doc = "BB_PTC"]
+    pub BB_PTC: BB_PTC,
+    #[doc = "BB_PTD"]
+    pub BB_PTD: BB_PTD,
+    #[doc = "BB_PTE"]
+    pub BB_PTE: BB_PTE,
     #[doc = "SYSTEMCONTROL"]
     pub SYSTEMCONTROL: SYSTEMCONTROL,
     #[doc = "SYSTICK"]
@@ -2050,6 +2064,12 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             AIPS1: AIPS1 {
+                _marker: PhantomData,
+            },
+            BB_AIPS0: BB_AIPS0 {
+                _marker: PhantomData,
+            },
+            BB_AIPS1: BB_AIPS1 {
                 _marker: PhantomData,
             },
             AXBS: AXBS {
